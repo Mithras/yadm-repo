@@ -2,4 +2,6 @@
     "window.titleBarStyle": "custom",
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "git.confirmForcePush": false,
+    "git.enableSmartCommit": true,
 }
