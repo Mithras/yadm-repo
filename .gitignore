@@ -1,0 +1,6 @@
+*
+!.config
+!.config/autostart
+!.config/autostart/*
+!.config/cosmic
+!.config/cosmic/**/*
