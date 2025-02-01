@@ -1,5 +1,5 @@
 #pattern  filter=crypt diff=crypt merge=crypt
-lighthouse  filter=crypt diff=crypt merge=crypt
+lighthouse##c.laptop  filter=crypt diff=crypt merge=crypt
 .config/mpd/mpd.conf##c.laptop  filter=crypt diff=crypt merge=crypt
 .config/mpd/mpd.conf##default  filter=crypt diff=crypt merge=crypt
 .config/ncmpcpp/config-mithras##c.laptop  filter=crypt diff=crypt merge=crypt

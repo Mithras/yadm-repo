@@ -1,16 +1,9 @@
 {
     (
         modifiers: [
-            Ctrl,
-            Shift,
-        ],
-        key: "s",
-    ): Spawn("/usr/bin/bash -c /home/mithras/Documents/test.sh"),
-    (
-        modifiers: [
             Super,
         ],
         key: "grave",
-        description: Some("test"),
-    ): Spawn("cosmic-screenshot"),
+        description: Some("swappy-screenshot"),
+    ): Spawn("gio launch Documents/scripts/swappy-screenshot.desktop"),
 }
