@@ -3,6 +3,7 @@
 
 !.config/autostart
 !.config/autostart/*
+.config/autostart/cpe_fbz_notify.desktop
 
 !.config/cosmic
 !.config/cosmic/**/*
@@ -12,6 +13,7 @@
 
 !.config/systemd
 !.config/systemd/**/*
+.config/systemd/user/default.target.wants/fb-sks-agent.service
 
 !Documents
 !Documents/scripts

@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=FBZ Notify
-Exec=/opt/facebook/bin/fbz notify
-X-GNMOE-Autostart-enabled=true
