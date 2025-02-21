@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Taiga
+Exec=env -u DISPLAY WINEPREFIX="/home/mithras/.wine" wine "C:\users\mithras\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Taiga\Taiga.lnk"
+Type=Application
+StartupNotify=true
+Path=/home/mithras/.wine/dosdevices/c:/users/mithras/AppData/Roaming/Taiga/data/db
+Icon=EC44_Taiga.0
+StartupWMClass=taiga.exe
