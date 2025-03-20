@@ -14,6 +14,7 @@
 !.config/systemd
 !.config/systemd/**/*
 .config/systemd/user/default.target.wants/fb-sks-agent.service
+.config/systemd/user/graphical-session.target.wants/fmenu.service
 
 !Documents
 !Documents/scripts

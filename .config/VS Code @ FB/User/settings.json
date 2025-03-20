@@ -1,0 +1,95 @@
+{
+    "metamate.codeActions.enabled": false,
+    "metamate.codeActions.experimental.enabled": false,
+    "metamate.inlineChat.codeAction.enabled": false,
+    "editor.codeLens": false,
+    "blame.disableInlineBlame": true,
+    "code-compose.enable": false,
+    "window.titleBarStyle": "custom",
+    "fb.ms-remote-connections.odtypes": [
+        {
+            "type": "ondemand_www",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_fbcode",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_bento",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_configerator",
+            "flavor": "default",
+            "folders": []
+        }
+    ],
+    "workbench.startupEditor": "none",
+    // ---
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[starlark]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[java]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[kotlin]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[objective-c]": {
+        "editor.formatOnSave": true,"editor.defaultFormatter": "nuclide.cpp"
+    },
+    "[proto]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[hack]": {
+        "editor.defaultFormatter": "nuclide.hack"
+    },
+    "[cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[c]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[cuda-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[tcc-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[objective-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "meta.global.history.enabled": true,
+    "[ocaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
+    "editor.lightbulb.enabled": "on",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.systemd.shouldUse": true,
+    "window.restoreWindows": "none",
+    "extensions.experimental.deferredStartupFinishedActivation": true,
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+}

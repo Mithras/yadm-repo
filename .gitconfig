@@ -1,0 +1,6 @@
+[user]
+	name = Sergei Kizilov
+	mail = sergeikizilov@meta.com
+	email = sergeikizilov@meta.com
+[core]
+	editor = code --wait
