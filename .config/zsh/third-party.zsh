@@ -3,7 +3,6 @@ THIRD_PARTY="$ZDOTDIR/third-party"
 if [ ! -d "$THIRD_PARTY" ]; then
   mkdir "$THIRD_PARTY"
   pushd "$THIRD_PARTY"
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
   git clone --depth=1 https://github.com/Aloxaf/fzf-tab.git
   git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git
   git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search.git
@@ -15,7 +14,6 @@ if [ ! -d "$THIRD_PARTY" ]; then
   popd
 fi
 
-source "$THIRD_PARTY/powerlevel10k/powerlevel10k.zsh-theme"
 source <(fzf --zsh)
 source "$THIRD_PARTY/fzf-tab/fzf-tab.plugin.zsh"
 source "$THIRD_PARTY/zsh-autosuggestions/zsh-autosuggestions.zsh"

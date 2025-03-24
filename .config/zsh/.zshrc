@@ -1,9 +1,6 @@
 fastfetch
 
-# p10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+eval "$(oh-my-posh init zsh --config ~/.config/zsh/omp.toml)"
 
 # completion
 autoload -Uz compinit ; compinit
@@ -52,6 +49,3 @@ alias yadm-code='yadm enter code --enable-features=UseOzonePlatform --ozone-plat
 
 # bindings
 source "$ZDOTDIR/bindings.zsh"
-
-# p10k config
-[[ ! -f "$ZDOTDIR/.p10k.zsh" ]] || source "$ZDOTDIR/.p10k.zsh"
