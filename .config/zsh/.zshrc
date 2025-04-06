@@ -33,6 +33,8 @@ alias meta-lighthouse='nmcli connection up lighthouse passwd-file lighthouse'
 alias meta-vpn='secret-tool lookup setting-name 802-1x ; nmcli connection up FB-VPN --ask'
 alias meta-update='sudo dnf upgrade-no-meta'
 alias meta-menu='/opt/facebook/bin/FMenuQt'
+alias meta-chef-disable='stop_chef_temporarily --solo  edgeos -t 1' # for 1h
+alias meta-chef-enable='stop_chef_temporarily --solo edgeos -e'
 alias code='code --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias code-fb='code-fb --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias code-fb-insiders='code-fb-insiders --enable-features=UseOzonePlatform --ozone-platform=wayland'
