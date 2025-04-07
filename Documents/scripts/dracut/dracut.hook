@@ -1,0 +1,25 @@
+[Trigger]
+Type=Package
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Target=linux
+Target=linux-headers
+Target=linux-lts
+Target=linux-lts-headers
+Target=linux-firmware
+Target=intel-ucode
+Target=amd-ucode
+Target=nvidia-dkms
+Target=nvidia-open-dkms
+Target=nvidia-beta-dkms
+Target=nvidia-open-beta-dkms
+# Target=broadcom-wl-dkms
+
+[Action]
+Description=Updating UKIs...
+When=PostTransaction
+Exec=/usr/local/bin/dracut.sh
+Depends=dracut
+Depends=rsync
+AbortOnFail
