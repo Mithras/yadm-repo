@@ -26,6 +26,16 @@
             "type": "ondemand_configerator",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_xplat_react",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "workbench.startupEditor": "none",
@@ -92,4 +102,15 @@
     "window.restoreWindows": "none",
     "extensions.experimental.deferredStartupFinishedActivation": true,
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "remora.focusOnStartup": false,
+    "[swift]": {
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "explorer.confirmPasteNative": false,
+    "[blueprint]": {
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "wasabi.interactiveDevelopment.introMessageNumTimesShown": 5,
+    "wasabi.interactiveDevelopment.disableIntroMessage": true,
 }
