@@ -10,6 +10,7 @@
 .config/cosmic/com.system76.CosmicSettings/v1/active-page
 .config/cosmic/com.system76.CosmicTerm/v1/font_name
 .config/cosmic/com.system76.CosmicAppList/v1/favorites
+.config/cosmic/com.system76.CosmicIdle/v1/screen_off_time
 
 !.config/systemd
 !.config/systemd/**/*

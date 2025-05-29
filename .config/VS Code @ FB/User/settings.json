@@ -113,4 +113,5 @@
     },
     "wasabi.interactiveDevelopment.introMessageNumTimesShown": 5,
     "wasabi.interactiveDevelopment.disableIntroMessage": true,
+    "bento.defaultPythonNotebookViewTypeOnOpeningFile": "text",
 }
