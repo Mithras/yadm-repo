@@ -49,6 +49,8 @@ alias lnav-journalctl='journalctl -f --no-tail -o json -b | lnav'
 alias swappy-screenshot='magick "$(cosmic-screenshot --interactive=false -s /tmp --notify=false)" -crop "$(slurp | sed -re "s/([0-9]+),([0-9]+) ([0-9]+)x([0-9]+)/\3X\4+\1+\2/g")" /tmp/magick.png && swappy -f /tmp/magick.png'
 alias yadm-code='yadm enter code --enable-features=UseOzonePlatform --ozone-platform=wayland ~'
 alias taiga='env -u DISPLAY WINEPREFIX="$HOME/.wine" wine "C:\\\\users\\$USER\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Taiga\Taiga.lnk"'
+alias g1='gamescope -O HDMI-A-1 -w 3840 -h 2160 -r 120 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
+alias g2='gamescope -O HDMI-A-2 -w 5120 -h 1440 -r 144 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
 
 # bindings
 source "$ZDOTDIR/bindings.zsh"
