@@ -39,6 +39,8 @@
         }
     ],
     "workbench.startupEditor": "none",
+    "devmate.inline.multipleSuggestions.enabled": false,
+    "devmate.assertivness.assistanceLevel": "Minimal",
     // ---
     "[python]": {
         "editor.formatOnSave": true,
@@ -114,4 +116,14 @@
     "wasabi.interactiveDevelopment.introMessageNumTimesShown": 5,
     "wasabi.interactiveDevelopment.disableIntroMessage": true,
     "bento.defaultPythonNotebookViewTypeOnOpeningFile": "text",
+    "[go]": {
+        "editor.defaultFormatter": "nuclide.go"
+    },
+    "[starlark-skycastle]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "devmate.clickableSparkleDecorator": false,
+    "security.workspace.trust.untrustedFiles": "open",
 }
