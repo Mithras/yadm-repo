@@ -5,4 +5,8 @@
     "git.confirmForcePush": false,
     "git.enableSmartCommit": true,
     "chat.commandCenter.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": "never"
 }
