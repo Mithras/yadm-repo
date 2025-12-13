@@ -36,6 +36,11 @@
             "type": "ondemand_www_fbsource_configerator",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_dataswarm",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "workbench.startupEditor": "none",
@@ -59,7 +64,8 @@
         "editor.defaultFormatter": "nuclide.arclint"
     },
     "[objective-c]": {
-        "editor.formatOnSave": true,"editor.defaultFormatter": "nuclide.cpp"
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.cpp"
     },
     "[proto]": {
         "editor.formatOnSave": true,
@@ -126,4 +132,30 @@
     "notebook.formatOnSave.enabled": true,
     "devmate.clickableSparkleDecorator": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "devmate.assertiveness.assistanceLevel": "Minimal",
+    "accessibility.openChatEditedFiles": false,
+    "terminal.integrated.showDevmateQuickFixButton": false,
+    "devmate.sidebar.assertiveness.fixWithDevmateAgentEnabled": false,
+    "devmate.sidebar.enableAutoRunApprovedCommands": false,
+    "devmate.sidebar.rulesEnabled": false,
+    "devmate.sidebar.suggestedFollowupsEnabled": false,
+    "terminal.integrated.showDevmateSelectionButton": false,
+    "devmate.devmateCombineFixDiagnostics": false,
+    "devmate.devmateQuickEdits.assertiveness.fixInlineEnabled": false,
+    "devmate.hoverFixesEnabled": false,
+    "devmate.inline.assertiveness.enable-inline-buttons-highlighted-text": false,
+    "devmate.inline.assertiveness.enable-inline-chat-codelens-fix-supressions": false,
+    "devmateCompanion.enabled": false,
+    "new-file-template.devmate": false,
+    "python-debugger.suppressFeedbackPane": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/bin/zsh"
+        }
+    },
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showExpandedAbbreviation": "never",
+    "diffEditor.ignoreTrimWhitespace": true,
 }

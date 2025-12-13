@@ -39,7 +39,7 @@ AUTO_NOTIFY_IGNORE+=("paru" "code")
 
 # aliases
 alias ls='lsd --human-readable --group-directories-first --classify'
-alias zsh-bench="$THIRD_PARTY/zsh-bench/zsh-bench"
+# alias zsh-bench="$THIRD_PARTY/zsh-bench/zsh-bench"
 alias meta-lighthouse='nmcli connection up lighthouse passwd-file lighthouse'
 alias meta-vpn='secret-tool lookup setting-name 802-1x ; nmcli connection up FB-VPN --ask'
 alias meta-update='sudo dnf upgrade-no-meta'
@@ -60,6 +60,7 @@ alias lnav-journalctl='journalctl -f --no-tail -o json -b | lnav'
 alias screenshot='~/Documents/scripts/screenshot.sh'
 alias yadm-code='yadm enter code --enable-features=UseOzonePlatform --ozone-platform=wayland ~'
 alias taiga='env -u DISPLAY WINEPREFIX="$HOME/.wine" wine "C:\\\\users\\$USER\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Taiga\Taiga.lnk"'
+alias tmux0='tmux new -As0'
 
 alias g1='gamescope -O HDMI-A-1 -w 3840 -h 2160 -r 120 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
 alias g2='gamescope -O HDMI-A-2 -w 5120 -h 1440 -r 144 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'

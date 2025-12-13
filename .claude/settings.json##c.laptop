@@ -1,1 +1,8 @@
-TODO
+{
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "enabledPlugins": {
+    "meta@Meta": true
+  }
+}
