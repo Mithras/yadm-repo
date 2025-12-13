@@ -1,6 +1,5 @@
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   SESSION_TYPE=remote/ssh
-# many other tests omitted
 else
   case $(ps -o comm= -p "$PPID") in
     sshd|*/sshd) SESSION_TYPE=remote/ssh;;
@@ -58,11 +57,15 @@ alias ssh-rpi02='ssh pi@192.168.10.208'
 alias nmcli-list='nmcli -f in-use,ssid,bssid,freq,signal,bars dev wifi'
 alias ncmpcpp-mithras='ncmpcpp -c ~/.config/ncmpcpp/config-mithras'
 alias lnav-journalctl='journalctl -f --no-tail -o json -b | lnav'
-alias swappy-screenshot='~/Documents/scripts/swappy-screenshot.sh'
+alias screenshot='~/Documents/scripts/screenshot.sh'
 alias yadm-code='yadm enter code --enable-features=UseOzonePlatform --ozone-platform=wayland ~'
 alias taiga='env -u DISPLAY WINEPREFIX="$HOME/.wine" wine "C:\\\\users\\$USER\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Taiga\Taiga.lnk"'
+
 alias g1='gamescope -O HDMI-A-1 -w 3840 -h 2160 -r 120 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
 alias g2='gamescope -O HDMI-A-2 -w 5120 -h 1440 -r 144 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
+
+alias mpv-hdr1='ENABLE_HDR_WSI=1 mpv --vo=gpu-next --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk'
+alias mpv-hdr2='ENABLE_HDR_WSI=1 mpv --vo=drm'
 
 # bindings
 source "$ZDOTDIR/bindings.zsh"

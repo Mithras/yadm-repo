@@ -4,6 +4,6 @@
             Super,
         ],
         key: "grave",
-        description: Some("swappy-screenshot"),
-    ): Spawn("gio launch Documents/scripts/swappy-screenshot.desktop"),
+        description: Some("screenshot"),
+    ): Spawn("gio launch Documents/scripts/screenshot.desktop"),
 }
