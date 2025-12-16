@@ -3,3 +3,6 @@
 chars = "\n"
 key = "Return"
 mods = "Shift"
+
+[window]
+decorations = "none"
