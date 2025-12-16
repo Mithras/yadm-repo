@@ -1,0 +1,5 @@
+[keyboard]
+[[keyboard.bindings]]
+chars = "\n"
+key = "Return"
+mods = "Shift"

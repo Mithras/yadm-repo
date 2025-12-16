@@ -158,4 +158,5 @@
     "emmet.showAbbreviationSuggestions": false,
     "emmet.showExpandedAbbreviation": "never",
     "diffEditor.ignoreTrimWhitespace": true,
+    "devmate.sidebar.open-on-startup": false,
 }
