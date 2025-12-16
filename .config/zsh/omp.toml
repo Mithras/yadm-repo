@@ -8,7 +8,7 @@ foreground = 'magenta'
 [transient_prompt]
 template = '❯ '
 foreground = 'magenta'
-foreground_templates = ['{{if gt .Code 0}}red{{end}}']
+# foreground_templates = ['{{if gt .Code 0}}red{{end}}']
 
 [[blocks]]
 type = 'prompt'
@@ -49,8 +49,11 @@ alignment = 'left'
 newline = true
 
 [[blocks.segments]]
-template = '❯'
-foreground = 'magenta'
-type = 'text'
-style = 'plain'
-foreground_templates = ['{{if gt .Code 0}}red{{end}}']
+type = "status"
+style = "plain"
+foreground = 'green'
+foreground_templates = [ "{{ if .Error }}red{{ end }}" ]
+template = "❯"
+
+[blocks.segments.options]
+always_enabled = true
