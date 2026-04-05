@@ -41,6 +41,16 @@
             "type": "ondemand_dataswarm",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "nest_msl_rdx",
+            "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "unicorn",
+            "folders": []
         }
     ],
     "workbench.startupEditor": "none",
@@ -159,4 +169,11 @@
     "emmet.showExpandedAbbreviation": "never",
     "diffEditor.ignoreTrimWhitespace": true,
     "devmate.sidebar.open-on-startup": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "local-utils.pasteClipboardImageToTerminal"
+    ],
+    "notebook.lineNumbers": "on",
+    "notebook.experimental.generate": false,
+    "chat.disableAIFeatures": true,
+    "task.allowAutomaticTasks": "on",
 }

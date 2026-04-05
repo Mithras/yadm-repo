@@ -1,17 +1,31 @@
 {
-    "window.titleBarStyle": "custom",
-    "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
-    "git.confirmForcePush": false,
-    "git.enableSmartCommit": true,
-    "chat.commandCenter.enabled": false,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "[dockercompose]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "window.titleBarStyle": "custom",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+  "git.confirmForcePush": false,
+  "git.enableSmartCommit": true,
+  "chat.commandCenter.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://models.dev": true,
+    "https://opencode.ai": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
+  }
 }

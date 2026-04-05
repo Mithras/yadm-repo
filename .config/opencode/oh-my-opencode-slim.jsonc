@@ -1,0 +1,47 @@
+{
+  "preset": "local",
+  "presets": {
+    "local": {
+      "orchestrator": {
+        "model": "llama.cpp-pc/qwen35-27",
+        "skills": ["*"],
+        "mcps": ["*"],
+      },
+      "oracle": {
+        "model": "llama.cpp-pc/qwen35-27",
+        "skills": ["simplify"],
+        "mcps": [],
+      },
+      "librarian": {
+        "model": "llama.cpp-pc/qwen35-27",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"],
+      },
+      "explorer": {
+        "model": "llama.cpp-pc/qwen35-27",
+        "skills": [],
+        "mcps": [],
+      },
+      "designer": {
+        "model": "llama.cpp-pc/qwen35-27",
+        "skills": ["agent-browser"],
+        "mcps": [],
+      },
+      "fixer": {
+        "model": "llama.cpp-pc/qwen35-27",
+        "skills": [],
+        "mcps": [],
+      },
+      "council": {
+        "master": { "model": "llama.cpp-pc/qwen35-27" },
+        // "presets": {
+        //   "default": {
+        //     "alpha": { "model": "openai/gpt-5.4-mini" },
+        //     "beta":  { "model": "google/gemini-3-pro" },
+        //     "gamma": { "model": "openai/gpt-5.3-codex" }
+        //   }
+        // }
+      },
+    },
+  },
+}

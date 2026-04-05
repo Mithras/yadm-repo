@@ -1,0 +1,106 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "default_agent": "plan",
+  "autoupdate": false,
+
+  "enabled_providers": ["llama.cpp", "llama.cpp-pc"],
+  "provider": {
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp",
+      "options": {
+        "baseURL": "https://mithras.duckdns.org:3005/v1",
+        "headers": {
+          "Authorization": "{env:OPENCODE_AUTH_HEADER}",
+        },
+      },
+      "models": {
+        "minimax-m25": {
+          "name": "minimax-m25",
+          "limit": {
+            "context": 196608,
+            "output": 65536,
+          },
+        },
+        "qwen35-instruct-general": {
+          "name": "qwen35-instruct-general",
+          "limit": {
+            "context": 262144,
+            "output": 65536,
+          },
+        },
+      },
+    },
+    "llama.cpp-pc": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp (pc)",
+      "options": {
+        "baseURL": "https://mithras.duckdns.org:3006/v1",
+        "headers": {
+          "Authorization": "{env:OPENCODE_AUTH_HEADER}",
+        },
+      },
+      "models": {
+        "qwen35-27": {
+          "name": "qwen35-27",
+          "limit": {
+            "context": 175000,
+            "output": 65536,
+          },
+          "options": {
+            "topP": 0.95,
+            "topK": 20,
+            "minP": 0.0,
+            "repeatPenalty": 1.0,
+            "temperature": 0.6,
+            "presencePenalty": 0.0,
+          },
+          "variants": {
+            "coding": {},
+            "general": {
+              "temperature": 1.0,
+              "presencePenalty": 1.5,
+            },
+          },
+        },
+      },
+    },
+  },
+  "model": "llama.cpp-pc/qwen35-27",
+
+  "mcp": {
+    // "perplexica": {
+    //   "type": "local",
+    //   "timeout": 300000,
+    //   "enabled": false,
+    //   "command": ["uvx", "perplexica-mcp", "stdio"],
+    //   "environment": {
+    //     "PERPLEXICA_BACKEND_URL": "http://192.168.0.6:3004/api/search",
+    //     "PERPLEXICA_CHAT_MODEL_PROVIDER": "gpt_oss_120",
+    //     "PERPLEXICA_CHAT_MODEL_NAME": "gpt_oss_120",
+    //     "PERPLEXICA_EMBEDDING_MODEL_PROVIDER": "Transformers",
+    //     "PERPLEXICA_EMBEDDING_MODEL_NAME": "all-MiniLM-L6-v2"
+    //   }
+    // }
+  },
+
+  "permission": {
+    "websearch": "allow",
+    "context7": "allow",
+    "grep_app": "allow",
+  },
+
+  "plugin": [
+    // https://github.com/Opencode-DCP/opencode-dynamic-context-pruning
+    "file:///usr/local/bin/bun/install/global/node_modules/@tarquinen/opencode-dcp/dist/index.js",
+    // https://github.com/alvinunreal/oh-my-opencode-slim
+    "file:///usr/local/bin/bun/install/global/node_modules/oh-my-opencode-slim/dist/index.js"
+  ],
+  
+  "agent": {
+    "council": {
+      "disable": true,
+    },
+  },
+}
