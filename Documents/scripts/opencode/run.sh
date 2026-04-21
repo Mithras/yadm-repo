@@ -6,6 +6,7 @@ mkdir -p "$HOME/.config/opencode"
 mkdir -p "$HOME/.local/share/opencode"
 mkdir -p "$HOME/.local/state/opencode"
 
+# -v "$HOME/.linkedin-mcp:/home/opencode/.linkedin-mcp" \
 docker run -it --rm \
     -v opencode:/home/opencode \
     -v "$HOME/.config/opencode:/home/opencode/.config/opencode" \

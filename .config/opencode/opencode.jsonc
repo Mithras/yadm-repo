@@ -4,72 +4,72 @@
   "default_agent": "plan",
   "autoupdate": false,
 
-  "enabled_providers": ["llama.cpp", "llama.cpp-pc"],
+  "enabled_providers": ["litellm"],
   "provider": {
-    "llama.cpp": {
+   "litellm": {
+      // "npm": "@ai-sdk/openai",  // doesn't work
       "npm": "@ai-sdk/openai-compatible",
-      "name": "llama.cpp",
+      "name": "litellm",
       "options": {
-        "baseURL": "https://mithras.duckdns.org:3005/v1",
-        "headers": {
-          "Authorization": "{env:OPENCODE_AUTH_HEADER}",
-        },
+        "baseURL": "https://mithras.duckdns.org:4001/v1",
+        "apiKey": "{env:LITELLM_API_KEY}",
+        "litellmProxy": true,
       },
       "models": {
-        "minimax-m25": {
-          "name": "minimax-m25",
-          "limit": {
-            "context": 196608,
-            "output": 65536,
-          },
-        },
-        "qwen35-instruct-general": {
-          "name": "qwen35-instruct-general",
-          "limit": {
-            "context": 262144,
-            "output": 65536,
-          },
-        },
-      },
-    },
-    "llama.cpp-pc": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "llama.cpp (pc)",
-      "options": {
-        "baseURL": "https://mithras.duckdns.org:3006/v1",
-        "headers": {
-          "Authorization": "{env:OPENCODE_AUTH_HEADER}",
-        },
-      },
-      "models": {
-        "qwen35-27": {
-          "name": "qwen35-27",
+        "Qwen3.5-27B": {
+          "name": "Qwen3.5-27B",
           "limit": {
             "context": 175000,
             "output": 65536,
           },
           "options": {
-            "topP": 0.95,
-            "topK": 20,
-            "minP": 0.0,
-            "repeatPenalty": 1.0,
-            "temperature": 0.6,
-            "presencePenalty": 0.0,
+              "temperature": 0.6,
+              "presence_penalty": 0.0
           },
-          "variants": {
-            "coding": {},
+         "variants": {
+            "coding": {
+              "temperature": 0.6,
+              "presence_penalty": 0.0
+            },
             "general": {
               "temperature": 1.0,
-              "presencePenalty": 1.5,
-            },
+              "presence_penalty": 1.5
+            }
           },
         },
-      },
+        "qwen36-35": {
+          "name": "qwen36-35",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "options": {
+            "temperature": 0.6,
+            "presence_penalty": 0.0
+          },
+          "variants": {
+            "coding": {
+              "temperature": 0.6,
+              "presence_penalty": 0.0
+            },
+            "general": {
+              "temperature": 1.0,
+              "presence_penalty": 1.5
+            }
+          },
+        },
+       },
     },
   },
-  "model": "llama.cpp-pc/qwen35-27",
+  "model": "litellm/Qwen3.5-27B",
 
   "mcp": {
+    "linkedin": {
+      "type": "local",
+      "command": ["uvx", "linkedin-scraper-mcp", "--transport", "stdio"],
+      "timeout": 60000,
+      "enabled": false
+    }
     // "perplexica": {
     //   "type": "local",
     //   "timeout": 300000,
@@ -95,7 +95,7 @@
     // https://github.com/Opencode-DCP/opencode-dynamic-context-pruning
     "file:///usr/local/bin/bun/install/global/node_modules/@tarquinen/opencode-dcp/dist/index.js",
     // https://github.com/alvinunreal/oh-my-opencode-slim
-    "file:///usr/local/bin/bun/install/global/node_modules/oh-my-opencode-slim/dist/index.js"
+    // "file:///usr/local/bin/bun/install/global/node_modules/oh-my-opencode-slim/dist/index.js"
   ],
   
   "agent": {
