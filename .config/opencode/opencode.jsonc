@@ -16,10 +16,10 @@
         "litellmProxy": true,
       },
       "models": {
-        "Qwen3.5-27B": {
-          "name": "Qwen3.5-27B",
+        "qwen-dense": {
+          "name": "qwen-dense",
           "limit": {
-            "context": 175000,
+            "context": 262144,
             "output": 65536,
           },
           "options": {
@@ -37,8 +37,8 @@
             }
           },
         },
-        "qwen36-35": {
-          "name": "qwen36-35",
+        "qwen-moe": {
+          "name": "qwen-moe",
           "limit": {
             "context": 262144,
             "output": 65536
@@ -56,12 +56,33 @@
               "temperature": 1.0,
               "presence_penalty": 1.5
             }
+         },
+        },
+        "gemma-dense": {
+          "name": "gemma-dense",
+          "limit": {
+            "context": 262144,
+            "output": 65536
           },
         },
-       },
+        "gemma-moe": {
+          "name": "gemma-moe",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+        },
+        "experimental": {
+          "name": "experimental",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+        },
+      },
     },
   },
-  "model": "litellm/Qwen3.5-27B",
+  "model": "litellm/qwen-dense",
 
   "mcp": {
     "linkedin": {

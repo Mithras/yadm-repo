@@ -6,4 +6,11 @@
         key: "grave",
         description: Some("screenshot"),
     ): Spawn("gio launch Documents/scripts/screenshot.desktop"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "v",
+        description: Some("CopyQ show"),
+    ): Spawn("copyq show"),
 }
