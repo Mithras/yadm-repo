@@ -1,8 +1,8 @@
 [
     Home,
-    Documents,
-    Downloads,
-    Music,
-    Pictures,
-    Videos,
+    Path("Documents"),
+    Path("Downloads"),
+    Path("Music"),
+    Path("Pictures"),
+    Path("Videos"),
 ]

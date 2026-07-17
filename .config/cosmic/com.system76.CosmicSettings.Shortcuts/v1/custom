@@ -3,6 +3,13 @@
         modifiers: [
             Super,
         ],
+        key: "e",
+        description: Some("Hermes"),
+    ): Spawn("Documents/scripts/hermes.sh"),
+    (
+        modifiers: [
+            Super,
+        ],
         key: "grave",
         description: Some("screenshot"),
     ): Spawn("gio launch Documents/scripts/screenshot.desktop"),

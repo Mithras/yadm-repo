@@ -37,6 +37,20 @@ export FZF_DEFAULT_OPTS="--exact --ignore-case"
 AUTO_NOTIFY_THRESHOLD=10
 AUTO_NOTIFY_IGNORE+=("paru" "code")
 
+# functions
+browser-cdp() {
+  local DATA_DIR=$1
+  local SSH_PORT=$2
+  (
+    ssh -o StrictHostKeyChecking=accept-new -N -R 9222:localhost:9222 hermes@mithras.app -p "$SSH_PORT" &
+    brave-browser \
+      --remote-debugging-port=9222 \
+      --user-data-dir="$DATA_DIR" \
+      --no-first-run \
+      --no-default-browser-check
+  )
+}
+
 # aliases
 alias ls='lsd --human-readable --group-directories-first --classify'
 # alias zsh-bench="$THIRD_PARTY/zsh-bench/zsh-bench"
@@ -52,8 +66,8 @@ alias code='code --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias code-fb='code-fb --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias code-fb-insiders='code-fb-insiders --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias openvpn-mithras='sudo openvpn ~/Sync/pc/MithrasOpenVPN.ovpn'
-alias ssh-mithras='ssh mithras@192.168.0.2'
-alias ssh-ubuntu1='ssh mithras@192.168.0.6'
+alias ssh-mithras='ssh mithras@192.168.1.2'
+alias ssh-ubuntu1='ssh mithras@192.168.1.4'
 alias ssh-ms-s1-max-0='ssh mithras@ms-s1-max-0'
 alias ssh-ms-s1-max-1='ssh mithras@ms-s1-max-1'
 alias nmcli-list='nmcli -f in-use,ssid,bssid,freq,signal,bars dev wifi'
@@ -65,6 +79,10 @@ alias taiga='env -u DISPLAY WINEPREFIX="$HOME/.wine" wine "C:\\\\users\\$USER\Ap
 alias t0='tmux new -As0'
 alias opencode='~/Documents/scripts/opencode/run.sh'
 alias opencode-debug='~/Documents/scripts/opencode/run-debug.sh'
+alias hermes='ssh -o StrictHostKeyChecking=accept-new -o Compression=yes -t hermes@mithras.app -p 2222 hermes-ssh'
+alias hermes-dina='ssh -o StrictHostKeyChecking=accept-new -o Compression=yes -t hermes@mithras.app -p 2223 hermes-ssh'
+alias cdp='browser-cdp $HOME/browser-mithras 2222'
+alias cdp-dina='browser-cdp $HOME/browser-dina 2223'
 
 alias g1='gamescope -O HDMI-A-1 -w 3840 -h 2160 -r 120 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
 alias g2='gamescope -O HDMI-A-2 -w 5120 -h 1440 -r 144 -f --hdr-enabled --mangoapp -e -- env DXVK_HDR=1 steam -gamepadui'
@@ -74,3 +92,8 @@ alias mpv-hdr2='ENABLE_HDR_WSI=1 mpv --vo=drm'
 
 # bindings
 source "$ZDOTDIR/bindings.zsh"
+
+# functions
+cleanup-claude-completions() {
+  sudo rm -f /usr/share/zsh/site-functions/_claude-templates*
+}

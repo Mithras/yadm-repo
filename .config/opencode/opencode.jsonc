@@ -11,7 +11,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "litellm",
       "options": {
-        "baseURL": "https://mithras.duckdns.org:4001/v1",
+        "baseURL": "https://mithras.app:4001/v1",
         "apiKey": "{env:LITELLM_API_KEY}",
         "litellmProxy": true,
       },
@@ -58,20 +58,6 @@
             }
          },
         },
-        "gemma-dense": {
-          "name": "gemma-dense",
-          "limit": {
-            "context": 262144,
-            "output": 65536
-          },
-        },
-        "gemma-moe": {
-          "name": "gemma-moe",
-          "limit": {
-            "context": 262144,
-            "output": 65536
-          },
-        },
         "experimental": {
           "name": "experimental",
           "limit": {
@@ -79,7 +65,7 @@
             "output": 65536
           },
         },
-      },
+       },
     },
   },
   "model": "litellm/qwen-dense",
