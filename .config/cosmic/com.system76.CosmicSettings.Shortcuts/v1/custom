@@ -3,6 +3,13 @@
         modifiers: [
             Super,
         ],
+        key: "e",
+        description: Some("Hermes"),
+    ): Spawn("alacritty -e ssh -o StrictHostKeyChecking=accept-new -o Compression=yes -t hermes@ubuntu1 -p 2222 TERM=xterm-256color hermes-ssh"),
+    (
+        modifiers: [
+            Super,
+        ],
         key: "grave",
         description: Some("screenshot"),
     ): Spawn("gio launch Documents/scripts/screenshot.desktop"),
