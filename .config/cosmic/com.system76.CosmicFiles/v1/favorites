@@ -5,4 +5,5 @@
     Path("Music"),
     Path("Pictures"),
     Path("Videos"),
+    Path("Sync"),
 ]

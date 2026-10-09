@@ -42,8 +42,8 @@ browser-cdp() {
   local DATA_DIR=$1
   local SSH_PORT=$2
   (
-    ssh -o StrictHostKeyChecking=accept-new -N -R 9222:localhost:9222 hermes@mithras.app -p "$SSH_PORT" &
-    brave-browser \
+    ssh -o StrictHostKeyChecking=no -N -R 9222:localhost:9222 hermes@mithras.app -p "$SSH_PORT" &
+    brave-origin \
       --remote-debugging-port=9222 \
       --user-data-dir="$DATA_DIR" \
       --no-first-run \
@@ -79,8 +79,8 @@ alias taiga='env -u DISPLAY WINEPREFIX="$HOME/.wine" wine "C:\\\\users\\$USER\Ap
 alias t0='tmux new -As0'
 alias opencode='~/Documents/scripts/opencode/run.sh'
 alias opencode-debug='~/Documents/scripts/opencode/run-debug.sh'
-alias hermes='ssh -o StrictHostKeyChecking=accept-new -o Compression=yes -t hermes@mithras.app -p 2222 hermes-ssh'
-alias hermes-dina='ssh -o StrictHostKeyChecking=accept-new -o Compression=yes -t hermes@mithras.app -p 2223 hermes-ssh'
+alias hermes='ssh -o StrictHostKeyChecking=no -o Compression=yes -t hermes@mithras.app -p 2222 hermes-ssh'
+alias hermes-dina='ssh -o StrictHostKeyChecking=no -o Compression=yes -t hermes@mithras.app -p 2223 hermes-ssh'
 alias cdp='browser-cdp $HOME/browser-mithras 2222'
 alias cdp-dina='browser-cdp $HOME/browser-dina 2223'
 

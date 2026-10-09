@@ -28,5 +28,6 @@
     "https://schemastore.azurewebsites.net/": true,
     "https://www.schemastore.org/": true
   },
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "diffEditor.ignoreTrimWhitespace": false
 }
